@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionDetailComponent
+    TransactionDetailComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
