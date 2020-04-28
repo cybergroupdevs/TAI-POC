@@ -5,7 +5,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TransactionDetailComponent,customerDialog } from './transaction-detail/transaction-detail.component';
+import { TransactionDetailComponent,customerDialog,consultantDialog} from './transaction-detail/transaction-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainpageComponent } from './mainpage/mainpage.component';
 
@@ -14,7 +14,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     AppComponent,
     TransactionDetailComponent,
     MainpageComponent,
-    customerDialog
+    customerDialog,
+    consultantDialog
     
   ],
   imports: [
@@ -27,6 +28,6 @@ import { MainpageComponent } from './mainpage/mainpage.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[customerDialog]
+  entryComponents:[customerDialog,consultantDialog],
 })
 export class AppModule { }

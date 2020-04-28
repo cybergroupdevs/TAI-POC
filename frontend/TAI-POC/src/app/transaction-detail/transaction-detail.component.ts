@@ -21,12 +21,18 @@ export class TransactionDetailComponent implements OnInit {
   
   data = transactionData;
 
-  openDialog(): void {
+  customerDialog(): void {
     const dialogRef = this.dialog.open(customerDialog, {
       width: '250px',
       
     });
-}}
+}
+consultantDialog():void{
+  const dialogRef =this.dialog.open(consultantDialog,{
+    width:'250px',
+  });
+}
+}
 @Component({
   selector: 'dialog-overview-example-dialog',
   templateUrl: 'customerDialog.html',
@@ -34,6 +40,18 @@ export class TransactionDetailComponent implements OnInit {
 export class customerDialog {
   constructor(
     public dialogRef: MatDialogRef<customerDialog>,
+    ) {}
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'consultantDialog.html',
+})
+export class consultantDialog {
+  constructor(
+    public dialogRef: MatDialogRef<consultantDialog>,
     ) {}
   onNoClick(): void {
     this.dialogRef.close();
