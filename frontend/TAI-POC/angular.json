@@ -124,12 +124,5 @@
       }
     }
   },
-<<<<<<< HEAD
   "defaultProject": "TAI-POC"
-=======
-  "defaultProject": "TAI-POC",
-  "cli": {
-    "analytics": false
-  }
->>>>>>> 1cd58fdfa691de62300f48516f7f102f93002345
 }

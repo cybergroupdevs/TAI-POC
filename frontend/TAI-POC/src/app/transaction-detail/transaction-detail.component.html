@@ -72,9 +72,9 @@
       <div class="container">
         <div class="wrapper">
           <button type="button" class="btn btn-primary mr-2">Backup</button>
-          <button type="button" class="btn btn-primary mr-2">Commission</button>
+          <button type="button" class="btn btn-primary mr-2" (click)="insertHeading()">commission</button>
           <button type="button" class="btn btn-primary mr-2">Consultant</button>
-          <button type="button" class="btn btn-primary">Customer</button>
+          <button type="button" class="btn btn-primary" (click)="openDialog()">Customer</button>
         </div>
       </div>
       <table mat-table [dataSource]="data" class="mat-elevation-z8 ">

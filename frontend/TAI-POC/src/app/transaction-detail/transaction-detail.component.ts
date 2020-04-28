@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 const transactionData: Transaction[] = [
   {class: '0026', sku: '80000', retail: '16.00', qun:'1', desc:'PAINT WAIST-SEAT',qtrtn:''},
   {class: '0026', sku: '80000', retail: '13.00', qun:'1', desc:'PAINT PLAIN BOTTOM',qtrtn:''}
@@ -13,7 +12,7 @@ const transactionData: Transaction[] = [
 })
 export class TransactionDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit() {
   }
@@ -22,8 +21,24 @@ export class TransactionDetailComponent implements OnInit {
   
   data = transactionData;
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(customerDialog, {
+      width: '250px',
+      
+    });
+}}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'customerDialog.html',
+})
+export class customerDialog {
+  constructor(
+    public dialogRef: MatDialogRef<customerDialog>,
+    ) {}
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
-
 export interface Transaction{
   class: String,
   sku: String,
