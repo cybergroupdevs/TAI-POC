@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TransactionDetailComponent,customerDialog,consultantDialog} from './transaction-detail/transaction-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { CutomerHistoryComponent } from './cutomer-history/cutomer-history.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     TransactionDetailComponent,
     MainpageComponent,
     customerDialog,
-    consultantDialog
+    consultantDialog,
+    CutomerHistoryComponent
     
   ],
   imports: [

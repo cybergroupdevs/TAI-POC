@@ -23,13 +23,13 @@ export class TransactionDetailComponent implements OnInit {
 
   customerDialog(): void {
     const dialogRef = this.dialog.open(customerDialog, {
-      width: '250px',
+      width: '60%',
       
     });
 }
 consultantDialog():void{
   const dialogRef =this.dialog.open(consultantDialog,{
-    width:'250px',
+    width:'450px',
   });
 }
 }
